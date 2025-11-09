@@ -4,11 +4,19 @@ import techBackground from "@/assets/tech-background.jpg";
 
 const Skills = () => {
   const skillsData = {
-    "Programming Languages": ["JavaScript", "Java", "SQL", "C"],
-    "Frontend": ["React.js", "HTML", "CSS", "Tailwind CSS", "Bootstrap"],
-    "Backend": ["Node.js", "Express.js", "REST APIs", "JWT", "Middleware", "MVC Pattern"],
-    "Databases": ["MongoDB", "MySQL", "Firebase", "Redis"],
-    "DevOps / Tools": ["Git", "GitHub", "Postman", "Vercel", "AWS (EC2, S3)", "Cloudinary", "Puppeteer"],
+    "Programming Languages": ["JavaScript", "Java", "SQL"],
+    Frontend: ["React.js", "Tailwind CSS", "Bootstrap"],
+    Backend: ["Node.js", "Express.js", "REST APIs"],
+    Databases: ["MongoDB", "MySQL", "Firebase", "Redis", "PostgreSQL"],
+    "DevOps / Tools": [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Vercel",
+      "AWS (EC2, S3)",
+      "Cloudinary",
+      "Puppeteer",
+    ],
   };
 
   return (
@@ -36,8 +44,13 @@ const Skills = () => {
           {/* Skills List */}
           <div className="space-y-8">
             {Object.entries(skillsData).map(([category, skills]) => (
-              <div key={category} className="glass-effect rounded-xl p-6 border border-primary/20">
-                <h3 className="text-2xl font-bold text-primary mb-4">{category}:</h3>
+              <div
+                key={category}
+                className="glass-effect rounded-xl p-6 border border-primary/20"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                  {category}:
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <Badge

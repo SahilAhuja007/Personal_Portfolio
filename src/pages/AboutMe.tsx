@@ -4,16 +4,25 @@ import profileImg from "@/assets/profile.png";
 
 const AboutMe = () => {
   const skills = [
-    "JavaScript", "Java", "SQL", "C",
-    "React.js", "Node.js", "Express.js",
-    "MongoDB", "MySQL", "Firebase",
-    "Git", "AWS", "REST APIs"
+    "JavaScript",
+    "Java",
+    "SQL",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MySQL",
+    "Firebase",
+    "Git",
+    "AWS",
+    "REST APIs",
   ];
 
   const featuredProjects = [
-    "PlaceNext - College Placement System",
-    "ResearchHub - Research Paper Management",
-    "Knowledge Lane Portal - Exam Prep Platform",
+    "PlaceNext – College Placement Management System",
+    "ResearchHub – Research Collaboration Platform",
+    "Knowledge Lane – AI-Powered Exam Preparation Portal",
+    "VKTut – Personalized Learning Platform",
   ];
 
   return (
@@ -34,28 +43,64 @@ const AboutMe = () => {
 
           <div className="space-y-6">
             <div className="glass-effect rounded-xl p-8 border border-primary/20">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Hi, I'm Sahil Ahuja</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Hi, I'm Sahil Ahuja
+              </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A dedicated B.E. Computer Engineering student with hands-on experience in web development 
-                and AI applications.
+                A dedicated B.E. Computer Engineering student with hands-on
+                experience in web development and AI applications.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Software Developer with hands-on experience in building scalable web applications. While 
-                proficient in full-stack development, I am especially enthusiastic about backend systems, 
-                clean architecture, and efficient API design. I enjoy solving real-world problems and 
-                creating seamless, impactful user experiences.
+                Software Developer with hands-on experience in building scalable
+                web applications. While proficient in full-stack development, I
+                am especially enthusiastic about backend systems, clean
+                architecture, and efficient API design. I enjoy solving
+                real-world problems and creating seamless, impactful user
+                experiences.
               </p>
             </div>
 
             <div className="glass-effect rounded-xl p-8 border border-primary/20">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Education</h3>
-              <div>
-                <h4 className="text-xl font-semibold text-primary">
-                  B.E. Computer Engineering
-                </h4>
-                <p className="text-muted-foreground">
-                  Vivekanand Education Society's Institute of Technology
-                </p>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Education
+              </h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-xl font-semibold text-primary">
+                    Vivekanand Education Society’s Institute Of Technology
+                  </h4>
+                  <p className="text-muted-foreground italic">
+                    Bachelor of Engineering in Computer Engineering — CGPA: 7.99
+                    (as of sem 6)
+                  </p>
+                  <p className="text-muted-foreground">
+                    Mumbai, India (2022 – 2026)
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-semibold text-primary">
+                    Smarth College Of Engineering And Science
+                  </h4>
+                  <p className="text-muted-foreground italic">
+                    Class XII (Maharashtra State Board) — Aggregate: 85.00%
+                  </p>
+                  <p className="text-muted-foreground">
+                    Maharashtra, India (2021 – 2022)
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-semibold text-primary">
+                    Gurunanak Vidyalaya Akola
+                  </h4>
+                  <p className="text-muted-foreground italic">
+                    Class X (SSC) — Aggregate: 92.60%
+                  </p>
+                  <p className="text-muted-foreground">
+                    Maharashtra, India (2019 – 2020)
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -63,7 +108,9 @@ const AboutMe = () => {
 
         {/* Featured Projects */}
         <div className="max-w-6xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Featured Projects</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-6">
+            Featured Projects
+          </h2>
           <div className="glass-effect rounded-xl p-8 border border-primary/20">
             <ul className="space-y-3">
               {featuredProjects.map((project) => (
@@ -78,7 +125,9 @@ const AboutMe = () => {
 
         {/* Tech Stack */}
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Tech Stack</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-6">
+            Tech Stack
+          </h2>
           <div className="glass-effect rounded-xl p-8 border border-primary/20">
             <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (

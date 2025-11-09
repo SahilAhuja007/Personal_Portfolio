@@ -5,18 +5,26 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    username: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+  const handleSubmit = async (e: React.FormEvent) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/send-personal-message",
+        { ...formData, mainname: "sahil" }
+      );
+      toast.success("Message sent successfully!");
+      setFormData({ username: "", email: "", message: "" });
+    } catch (error) {
+      alert("there is an issue sending mail");
+    }
   };
 
   return (
@@ -27,50 +35,69 @@ const Contact = () => {
             <span className="text-gradient">Get In Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground">
-            Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+            Have a project in mind? I'd love to hear about it. Let's create
+            something amazing together.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass-effect rounded-2xl p-8 border border-primary/20 mb-12">
+          <form
+            onSubmit={handleSubmit}
+            className="glass-effect rounded-2xl p-8 border border-primary/20 mb-12"
+          >
             <div className="space-y-6">
               <div>
-                <label className="block text-foreground font-medium mb-2">Name</label>
+                <label className="block text-foreground font-medium mb-2">
+                  Name
+                </label>
                 <Input
                   type="text"
                   placeholder="Your full name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  value={formData.username}
+                  onChange={(e) =>
+                    setFormData({ ...formData, username: e.target.value })
+                  }
                   required
                   className="bg-muted/50 border-primary/20 focus:border-primary"
                 />
               </div>
 
               <div>
-                <label className="block text-foreground font-medium mb-2">Email</label>
+                <label className="block text-foreground font-medium mb-2">
+                  Email
+                </label>
                 <Input
                   type="email"
                   placeholder="your.email@example.com"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                   className="bg-muted/50 border-primary/20 focus:border-primary"
                 />
               </div>
 
               <div>
-                <label className="block text-foreground font-medium mb-2">Message</label>
+                <label className="block text-foreground font-medium mb-2">
+                  Message
+                </label>
                 <Textarea
                   placeholder="Tell me about your project..."
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   required
                   rows={6}
                   className="bg-muted/50 border-primary/20 focus:border-primary resize-none"
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6">
+              <Button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
+              >
                 Send Message
               </Button>
             </div>
@@ -97,7 +124,9 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Location</h3>
+              <h3 className="text-lg font-bold text-foreground mb-2">
+                Location
+              </h3>
               <p className="text-muted-foreground">Mumbai, India</p>
             </div>
           </div>
