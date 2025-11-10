@@ -102,34 +102,6 @@ const Contact = () => {
               </Button>
             </div>
           </form>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-effect rounded-xl p-6 border border-primary/20 text-center">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground">sahil.ahuja@example.com</p>
-            </div>
-
-            <div className="glass-effect rounded-xl p-6 border border-primary/20 text-center">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Phone</h3>
-              <p className="text-muted-foreground">+91 XXXXX XXXXX</p>
-            </div>
-
-            <div className="glass-effect rounded-xl p-6 border border-primary/20 text-center">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                Location
-              </h3>
-              <p className="text-muted-foreground">Mumbai, India</p>
-            </div>
-          </div>
         </div>
       </div>
 
