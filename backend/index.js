@@ -28,14 +28,16 @@ const mohitpassword = "hjey hzlj fvwm mful";
 const rahulmail = "dhnvnvcd@gmail.com";
 const rahulpassword = "apor mmmn hutj jbbh";
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: parseInt("587"),
   auth: {
     user: "connectwithsahilandmohit@gmail.com",
     pass: "ctod yyqz rthy nclu",
   },
 });
 const transport = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: parseInt("587"),
   auth: {
     user: sahilmail,
     pass: sahilmailpassword,
@@ -43,7 +45,8 @@ const transport = nodemailer.createTransport({
 });
 
 const transpor = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: parseInt("587"),
   auth: {
     user: mohitmail,
     pass: mohitpassword,
@@ -51,7 +54,8 @@ const transpor = nodemailer.createTransport({
 });
 
 const transporter1 = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: parseInt("587"),
   auth: {
     user: rahulmail,
     pass: rahulpassword,
