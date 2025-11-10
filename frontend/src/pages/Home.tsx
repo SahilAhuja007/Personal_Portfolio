@@ -67,10 +67,13 @@ const Home = () => {
 
     setSending(true);
     try {
-      const response = await axios.post("http://localhost:5000/send-message", {
-        mainName: "sahil",
-        email,
-      });
+      const response = await axios.post(
+        "https://sahil-portfolio-fxkp.onrender.com/send-message",
+        {
+          mainName: "sahil",
+          email,
+        }
+      );
       toast.success("Resume sent successfully!");
       setEmail("");
       setShowEmailPopup(false);

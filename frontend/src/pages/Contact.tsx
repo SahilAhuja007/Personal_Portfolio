@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/send-personal-message",
+        "https://sahil-portfolio-fxkp.onrender.com/send-personal-message",
         { ...formData, mainname: "sahil" }
       );
       toast.success("Message sent successfully!");
